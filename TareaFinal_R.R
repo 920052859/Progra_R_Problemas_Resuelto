@@ -452,8 +452,10 @@ plot(resultado, type = 'l')
  plot(resultado2,type = 'l')
  
     
- sum(resultado==Boston[Prueba1,]$medv) / length(Boston[Prueba1,]$medv)*100
- 
+ (sum(Boston[Prueba1,]$medv)-sum(resultado))/ sum(Boston[Prueba1,]$medv)*100
+ sum(resultado) / length(Boston[Prueba1,]$medv)*100
+ sum(resultado2) / length(Boston[Prueba2,]$medv)*100 
+ (sum(Boston[Prueba2,]$medv)-sum(resultado2)) / length(Boston[Prueba2,]$medv)*100
  
  table(resultado,Boston[Prueba1,]$medv)
      class(resultado)
@@ -492,4 +494,11 @@ plot(resultado, type = 'l')
      239      347      349      463      223 
      21.65648 21.65648 27.42727 21.65648 27.42727 
      
+     #### hay ma
+     resultado[1]
+     for( i in 1:48)
+resultado[1]+  Boston[Prueba2,]$medv[1]   
 
+
+#### en conclusion se podria decir que en el arreglo 1 hay nemos % de error ya que son mas datos a manejar 
+#### por que sale 1.05% de erro 
